@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const Input = styled.input`
@@ -19,6 +23,10 @@ export const Input = styled.input`
   margin-top: -50px;
   outline: none;
   transition: border-color 0.2s;
+
+  @media screen and (max-width: 768px) {
+    max-width: 60%;
+  }
 `;
 
 export const Button = styled.button`
@@ -36,5 +44,9 @@ export const Button = styled.button`
   transition: background-color 0.2s;
   &:hover {
     background-color: #f63823;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 60%;
   }
 `;

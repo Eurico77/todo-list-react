@@ -9,6 +9,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    max-width: 85vh;
+  }
 `;
 
 export const Title = styled.h1`
@@ -16,4 +20,9 @@ export const Title = styled.h1`
   color: #d62828;
   margin-bottom: 20px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 10px;
+  }
 `;

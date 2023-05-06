@@ -3,20 +3,10 @@ import { Card } from '../../components/Card';
 import { InputContainer } from '../../components/Form';
 
 import { useState } from 'react';
+import { Container } from '../../styles/global';
 
 export function Home() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      title: 'Comprar comida para o gato',
-      completed: false,
-    },
-    {
-      id: 2,
-      title: 'Pagar conta de luz',
-      completed: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
@@ -45,7 +35,7 @@ export function Home() {
   }
 
   return (
-    <>
+    <Container>
       <Header />
       <InputContainer
         onSubmit={handleCreateNewTask}
@@ -60,6 +50,6 @@ export function Home() {
           onToggleTaskCompletion={() => handleToggleTaskCompletion(task.id)}
         />
       ))}
-    </>
+    </Container>
   );
 }
