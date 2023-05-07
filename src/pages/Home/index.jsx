@@ -2,11 +2,16 @@ import { Header } from '../../components/Header';
 import { Card } from '../../components/Card';
 import { InputContainer } from '../../components/Form';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container } from '../../styles/global';
 
 export function Home() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    localStorage.getItem('tasks')
+      ? JSON.parse(localStorage.getItem('tasks'))
+      : []
+  );
+
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
@@ -17,6 +22,7 @@ export function Home() {
       title: newTaskTitle,
       completed: false,
     };
+
     setTasks((oldTasks) => [...oldTasks, newTask]);
     setNewTaskTitle('');
   }
@@ -33,6 +39,10 @@ export function Home() {
     });
     setTasks(newTasks);
   }
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   return (
     <Container>

@@ -30,7 +30,7 @@ export const CardWrapper = styled.div`
   margin-top: 25px;
   padding: 16px;
 
-  background-color: ${({ completed }) => (completed ? 'red' : '#e5e5e5')};
+  background-color: ${({ completed }) => (completed ? '#2E8B57' : '#e5e5e5')};
 
   @media screen and (max-width: 768px) {
     max-width: 80%;
@@ -42,7 +42,7 @@ export const CardTitle = styled.p`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #000;
+  color: ${({ completed }) => (completed ? '#fff' : '#000')};
   text-align: center;
   font-family: sans-serif;
 
@@ -61,15 +61,11 @@ export const Checkbox = styled.input`
   height: 20px;
   background-color: #e5e5e5;
 
-  &:checked {
-    background-color: red;
-  }
-
   @media screen and (max-width: 768px) {
     max-width: 100%;
-    padding: 80px 10px;
-    width: 50px;
-    height: 50px;
+    padding: 50px 10px;
+    width: 25px;
+    height: 25px;
   }
 `;
 
