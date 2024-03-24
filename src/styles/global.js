@@ -5,6 +5,10 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
   }
   body {
     font-family: 'Bebas Neue', cursive; 
@@ -13,12 +17,9 @@ export default createGlobalStyle`
 `;
 
 export const Container = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
 
   @media screen and (max-width: 768px) {
     max-width: 100%;
-    padding: 0 10px;
   }
 `;

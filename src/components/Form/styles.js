@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +25,11 @@ export const Input = styled.input`
   transition: border-color 0.2s;
 
   @media screen and (max-width: 768px) {
-    max-width: 60%;
+    max-width: 90%;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
   }
 `;
 
@@ -48,5 +52,7 @@ export const Button = styled.button`
 
   @media screen and (max-width: 768px) {
     max-width: 60%;
+    font-size: 1rem;
+    width: 100%;
   }
 `;
