@@ -1,6 +1,6 @@
 import { Home } from './pages/Home';
-import { ThemeProvider } from 'styled-components';
 
+import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/global';
 
 export default function App() {
