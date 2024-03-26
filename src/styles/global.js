@@ -10,6 +10,7 @@ export default createGlobalStyle`
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
   }
+  
   body {
     font-family: 'Bebas Neue', cursive; 
     -webkit-font-smoothing: antialiased;
