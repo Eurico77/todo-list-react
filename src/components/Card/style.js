@@ -16,7 +16,8 @@ export const CardContainer = styled.div`
 
 export const CardWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: ${({ completed }) =>
+    completed ? 'space-between' : 'flex-start'};
   align-items: center;
   width: 500px;
   margin: 21px auto;
