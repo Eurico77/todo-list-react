@@ -39,7 +39,7 @@ export const Button = styled.button`
   border: none;
   border-radius: 8px;
   margin: 16px;
-  background-color: #d62828;
+  background-color: #000;
   color: #fff;
   font-weight: bold;
   cursor: pointer;
@@ -47,7 +47,7 @@ export const Button = styled.button`
   font-size: 2rem;
   transition: background-color 0.2s;
   &:hover {
-    background-color: #f63823;
+    opacity: 0.8;
   }
 
   @media screen and (max-width: 768px) {
