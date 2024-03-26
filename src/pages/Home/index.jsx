@@ -40,6 +40,11 @@ export function Home() {
     setTasks(newTasks);
   }
 
+  function handleRemoveTask(id) {
+    const newTasks = tasks.filter((task) => task.id !== id);
+    setTasks(newTasks);
+  }
+
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
@@ -58,6 +63,7 @@ export function Home() {
           title={task.title}
           completed={task.completed}
           onToggleTaskCompletion={() => handleToggleTaskCompletion(task.id)}
+          onRemoveTask={() => handleRemoveTask(task.id)}
         />
       ))}
     </Container>
