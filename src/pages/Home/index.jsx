@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { Container } from '../../styles/global';
 
 export function Home() {
+  
   const [tasks, setTasks] = useState(
     localStorage.getItem('tasks')
       ? JSON.parse(localStorage.getItem('tasks'))

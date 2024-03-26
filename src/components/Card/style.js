@@ -29,6 +29,7 @@ export const CardWrapper = styled.div`
 
   @media screen and (max-width: 768px) {
     max-width: 90%;
+    height: 4rem;
     font-size: 1rem;
     text-align: center;
     padding: 8px;

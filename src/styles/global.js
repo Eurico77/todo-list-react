@@ -14,6 +14,7 @@ export default createGlobalStyle`
   body {
     font-family: 'Bebas Neue', cursive; 
     -webkit-font-smoothing: antialiased;
+    background-color: #f5f5f5;
   }
 `;
 
